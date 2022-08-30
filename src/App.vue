@@ -1,74 +1,5 @@
 <template>
-  <v-app  style="background-color:#1D6382" view="lHh Lpr lFf">
-    <v-app-bar
-    flat
-    outlined
-    color="#1D6382"
-    >
-    <div class="btn-container">
-      <div >
-        <v-btn class="v-btn btn-text">
-         Cadastro
-        </v-btn>
-      </div>
-      <v-divider 
-      dark
-      vertical
-      inset
-      class="mx-4"
-      >
-      </v-divider>
-      <div>
-        <v-btn class="v-btn">
-         Login
-        </v-btn>
-      </div>
-    </div>
-      <div class="spheres"
-      >
-        <div class="sphere"></div>
-        <div class="sphere"></div>
-        <div class="sphere">
-          <div class="image"></div>
-        </div>
-        <div class="sphere"></div>
-        <div class="sphere"></div>
-        <div class="sphere"></div>
-
-      </div>
-    </v-app-bar>
-    <v-container>
-      <div 
-      style="
-      background-color:#1D6382;
-      padding-top:10%;
-  
-
-      "
-      class="text-container "
-      >
-      <div class="sphere-cube"></div>
-      <div class="cube"></div>
-      <div class="cube">
-        <div class="image1"></div>
-      </div>
-      <div class="text">
-        <div class="text text-shadow">
-          Controle de Acesso a Fábrica de Software
-        </div>
-        <div class="text text-shadow">
-          O Controle de acesso 
-          à fábrica de software, 
-          referido pelo acrônimo C.A.F.S, 
-          é um sistema que busca auxiliar 
-          os coordenadores e as suas equipes
-          a gerenciarem a sua jornada de trabalho 
-          previamente estabelecida
-        </div>
-      </div>
-    </div>
-    </v-container>
-  </v-app>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -129,15 +60,6 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-.cube:nth-child(3) .image1{
-  background-image: url(assets/AA1.png);
-  width:60%;
-  height: 75%;
-  position:fixed;
-  background-size:contain;
-  border-radius: 200px 200px 100px 100px;
-  transform: rotate(315deg);
 }
 .cube:nth-child(2){
   background-color: #D9D9D9;
@@ -263,5 +185,8 @@ html{
   width: 100%;
   justify-content: flex-end;
   display: flex;
+}
+.sidebar{
+  background-color: black;
 }
 </style>
