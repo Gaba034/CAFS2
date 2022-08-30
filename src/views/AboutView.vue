@@ -1,8 +1,10 @@
-<template>
+<script>
+</script>
+<template> 
   <v-app>
   <v-container class="placeholder">
     <div class="navbar" style="display:flex">
-      <v-card >
+      <v-card style="border-radius: 0px">
         <v-navigation-drawer
           permanent
           expand-on-hover
@@ -13,80 +15,49 @@
           </v-image>
           </div>
           <v-divider></v-divider>
-          <div class="barsize1">NOMES</div>
+          <div class="barsize1">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-folder</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>  </v-list-item-title>
+            </v-list-item>
+          </div>
           <v-divider></v-divider>
           <div class="barsize2">
           <v-list
             nav
             dense
           >
-            <v-list-item link>
+            <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-folder</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>My Files</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-account-multiple</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Shared with me</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-star</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Starred</v-list-item-title>
+              <v-list-item-title>  </v-list-item-title>
             </v-list-item>
           </v-list>
           </div>
           <v-divider></v-divider>
-          <div class="barsize3">OUTROS LINKS</div>
+          <div class="barsize3">
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-folder</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>  </v-list-item-title>
+            </v-list-item>
+          </div>
         </v-navigation-drawer>
       </v-card>
     </div>
-    <div class="appbar">
+    <div  class="appbar-cont">
       <v-app-bar
-        dark
         style="height:15%"
-      >
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-  
-        <v-toolbar-title>Page title</v-toolbar-title>
-  
+        id="appbar"
+      >  
+        <v-toolbar-title>TITLE</v-toolbar-title> 
         <v-spacer></v-spacer>
-  
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
-        </v-btn>
-  
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-  
         <v-menu
-          left
-          bottom
         >
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              icon
-              v-bind="attrs"
-              v-on="on"
-            >
-              <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
-          </template>
-  
-          <v-list>
-            <v-list-item
-              v-for="n in 5"
-              :key="n"
-              @click="() => {}"
-            >
-              <v-list-item-title>Option {{ n }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
         </v-menu>
       </v-app-bar>
     </div>
@@ -112,12 +83,16 @@
 .navbar{
     height: 100%;
     width: auto;
-    max-width: 15vw;
+    max-width: 13vw;
     position: relative;
 }
-.appbar{
+.appbar-cont{
   display: flex;
   width: 100%;
+}
+#appbar{
+  background-color: #6E9EB2;
+  border-left: white 1px solid;
 }
 .navbar:hover .iflogo{
   height: auto;
@@ -149,11 +124,5 @@
   min-height: 30%;
   height: auto;
   max-height:100%;
-}
-.iflogo{
-  height: auto;
-  width: 100%;
-  background-image: url(@/assets/AB.jpg);
-  background-size: 100% 100%;
 }
 </style>
